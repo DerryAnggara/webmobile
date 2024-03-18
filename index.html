@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>INPUT DATA KE SPREAD SHEET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo"><img src="logosmk4.png" alt="" srcset=""></div>
+    <div class="tulisan">
+      <ul>
+        <li><a href="#form-container">FORM</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <div id="form-container">
+        <h2>Data Kegiatan</h2>
+        <!-- akses link script app -->
+        <form action="https://script.google.com/macros/s/AKfycbzBMcZvQ6Tm_UlIbYZ5OxVdsybRpooYAjhCdTjkwzunq7sbz9duNpp5Sz89EVHfrLmZ/exec" method="post" enctype="multipart/form-data">
+            <!-- end akses  -->
+            <label for="no">Nomor</label>
+            <input type="number" id="no" name="no" required>
+            </br>
+            </br>
+
+            <label for="nama">Nama Kegiatan:</label>
+            <input type="text" id="nama" name="nama" required>
+            <label for="jenis">Pilih Jenis Kegiatan:</label>
+            <select name="jenis" id="jenis" required>
+                <option></option>
+                <option value="kbm">KBM </option>
+                <option value="nonkbm">Non KBM</option>
+            </select>
+            <br>
+            <br>
+            <label for="tgl_kgt">Tanggal kegiatan:</label>
+            <input type="date" id="tgl_kgt" name="tgl_kgt" required>
+            <br>
+            <label for="uraian">Uraian Kegiatan:</label>
+            </br>
+            <textarea cols="60" rows="10" type="text" id="uraian" name="uraian" required></textarea></br>
+            </br>
+            </br>
+            <label for="target">Target Capaian:</label>
+            <textarea cols="60" rows="10" type="text" id="target" name="target" required></textarea></br>
+            </br>
+
+            <label for="buktis">Bukti Kegiatan:</label>
+
+            <!-- This is an input element of type file, which allows the user to select an image -->
+            <input type="file" name="buktis" id="buktis" accept="image/*">
+            <input type="hidden" id="buktisEnc" name="buktisEnc">
+            <!-- This is an image element with an empty src and alt attribute -->
+            <script>
+                document.getElementById('buktis').addEventListener('change', function(event) {
+                    var file = event.target.files[0];
+                    var reader = new FileReader();
+                    reader.onloadend = function() {
+                        document.getElementById('buktisEnc').value = reader.result.split(',')[1];
+                    }
+                    reader.readAsDataURL(file);
+                });
+            </script>
+
+
+            
+            <script>
+                
+                function takeSnapshot() {
+                    var img = document.createElement('img');
+                    var context;
+                    var width = video.offsetWidth,
+                        height = video.offsetHeight;
+
+                    canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    context = canvas.getContext('2d');
+                    context.drawImage(video, 0, 0, width, height);
+
+                    img.src = canvas.toDataURL('image/png');
+                    document.body.appendChild(img);
+                }
+            </script>
+            <div>
+            <input type="submit" value="Simpan Data">
+            </div>
+        </form>
+        
+    </div>
+</body>
+
+</html>
