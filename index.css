@@ -27,6 +27,10 @@ nav{
     font-weight: 700;
 }
 
+.uraian{
+    margin: 0;
+}
+
 .tulisan{
     display: flex;
     justify-content: center;
