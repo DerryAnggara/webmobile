@@ -22,17 +22,82 @@
     <div id="form-container">
         <h2>Data Peminjaman Buku Perpustakaan</h2>
         <!-- akses link script app -->
-        <form action="https://script.google.com/macros/s/AKfycbz-UdsFrLxUn0nlW1Mo0txUHo_iOb408DHkWRaVbGpnhnSYeqnHaajVrncqN5cpaiBK/exec" method="post" enctype="multipart/form-data">
+        <form action="https://script.google.com/macros/s/AKfycbwRTqAKC_h2Q7c0MIAbU_D7Otyy9Dlg6767hLO_0sl9-VQPNXfJoh48iRHCtkBbp3VT/exec" method="post" enctype="multipart/form-data">
             <!-- end akses  -->
             <!-- <label for="no">Nomor</label>
             <input type="number" id="no" name="no" required> -->
+                
             
-            
+            <!-- <label for="tahun">Tahun :</label>
+            <select id="pilih-tahun">
+                <option selected>Pilih tahun</option>
+                <option value="2024">2024</option>
+                <option value="2025">X2025</option>
+                <option value="2026">2026</option>
+            </select> -->
+
+
+            <label for="bulan">Bulan :</label>
+            <!-- <input type="text" id="bulan" name="bulan" required> -->
+            <select id="pilih-bulan" name="bulan">
+                <option selected>Pilih Bulan</option>
+                <option value="Januari 2024">Januari 2024</option>
+                <option value="Februari 2024">Februari 2024</option>
+                <option value="Maret 2024">Maret 2024</option>
+                <option value="April 2024">April 2024</option>
+                <option value="Mei 2024">Mei 2024</option>
+                <option value="Juni 2024">Juni 2024</option>
+                <option value="Juli 2024">Juli 2024</option>
+                <option value="Agustus 2024">Agustus 2024</option>
+                <option value="September 2024">September 2024</option>
+                <option value="Okteber 2024">Okteber 2024</option>
+                <option value="November 2024">November 2024</option>
+                <option value="Desember 2024">Desember 2024</option>
+            </select>
 
             <label for="nama">Nama Siswa :</label>
             <input type="text" placeholder="Contoh : Togar Fuated " id="nama" name="nama" required>
+            <!-- <label for="kelas">Kelas :</label>
+            <input type="text" placeholder="Contoh : XI RPL 1" id="kelas" name="kelas" required> -->
+
             <label for="kelas">Kelas :</label>
-            <input type="text" placeholder="Contoh : XI RPL 1" id="kelas" name="kelas" required>
+            <select id="pilih-kelas">
+                <option selected>Pilih Kelas</option>
+                <option value="X">X / Sepuluh</option>
+                <option value="XI">XI / Sebelas</option>
+                <option value="XII">XII / Dua Belas</option>
+            </select>
+
+            <label id="jurusan" class="d-none" for="jurusan">Jurusan :</label>      
+
+            <select name="kelas" id="kelas-1" class="d-none">
+                <option value="XRPL1">X RPL 1</option>
+                <option value="XRPL2">X RPL 2</option>
+                <option value="XTITL1">X TITL 1</option>
+                <option value="XTITL2">X TITL 2</option>
+                <option value="XTITL3">X TITL 3</option>
+                <option value="XRPL3">X RPL 3</option>
+            </select>
+
+            <select name="kelas" id="kelas-2" class="d-none">
+                <option value="XIRPL1">XI RPL 1</option>
+                <option value="XIRPL2">XI RPL 2</option>
+                <option value="XITITL1">XI TITL 1</option>
+                <option value="XITITL2">XI TITL 2</option>
+                <option value="XITITL3">XI TITL 3</option>
+                <option value="XIRPL3">XI RPL 3</option>
+            </select>
+
+            <select name="kelas" id="kelas-3" class="d-none">
+                <option value="XIIRPL1">XII RPL 1</option>
+                <option value="XIIRPL2">XII RPL 2</option>
+                <option value="XIITITL1">XII TITL 1</option>
+                <option value="XIITITL2">XII TITL 2</option>
+                <option value="XIITITL3">XII TITL 3</option>
+                <option value="XIIRPL3">XII RPL 3</option>
+            </select>
+
+
             <!-- <label for="jenis">Pilih Jenis Kegiatan:</label>
             <select name="jenis" id="jenis" required>
                 <option></option>
@@ -50,6 +115,8 @@
 
             <label for="tgl_akhir">Tanggal Pengembalian Buku :</label>
             <input type="date" id="tgl_akhir" name="tgl_akhir" required>
+
+
             
             <!-- <label" for="uraian">Uraian Kegiatan :</label>
             
@@ -104,6 +171,7 @@
         </form>
         
     </div>
+    <script src="js.js"></script>
 </body>
 
 </html>
